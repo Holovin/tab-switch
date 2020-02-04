@@ -17,9 +17,4 @@ public abstract class ChangeTabAction extends TabAction {
   protected List<VirtualFile> getOpenFiles(Project project) {
     return fileFetcher.getFiles(project);
   }
-
-  @Override
-  protected boolean moveOnShow() {
-    return false;
-  }
 }

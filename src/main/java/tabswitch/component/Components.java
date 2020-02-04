@@ -1,8 +1,6 @@
 package tabswitch.component;
 
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import javax.swing.JList;
+import javax.swing.*;
 
 import com.intellij.openapi.project.Project;
 

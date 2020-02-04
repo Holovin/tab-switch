@@ -31,21 +31,11 @@ public abstract class TabAction extends AnAction implements DumbAware {
 
   protected abstract List<VirtualFile> getOpenFiles(Project project);
 
-  /**
-   * @return true if to move down selected index position one step on show of list popup chooser window.
-   */
-  protected abstract boolean moveOnShow();
-
-  /**
-   * @return true if this action moves down the list, false - up the list
-   */
-  protected abstract boolean moveUp();
-
   @Override
   public void actionPerformed(AnActionEvent event) {
     Project project = getProject(event);
     if (canShowTabSwitchPopup(event, project)) {
-      TabSwitchProjectComponent.getHandler(project).show(getKeyEvent(event), moveUp(), moveOnShow(), getOpenFiles(project));
+      TabSwitchProjectComponent.getHandler(project).show(getOpenFiles(project));
     }
   }
 
@@ -60,9 +50,5 @@ public abstract class TabAction extends AnAction implements DumbAware {
 
   private boolean canShowTabSwitchPopup(AnActionEvent event, Project project) {
     return project != null && event.getInputEvent() instanceof KeyEvent;
-  }
-
-  private KeyEvent getKeyEvent(AnActionEvent event) {
-    return (KeyEvent) event.getInputEvent();
   }
 }

@@ -1,19 +1,10 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-}
-
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.3.9'
+    id 'org.jetbrains.intellij' version '0.4.16'
 }
-apply plugin: 'idea'
-apply plugin: 'org.jetbrains.intellij'
-apply plugin: 'java'
 
-group 'com.github.stepan'
-version '1.0-SNAPSHOT'
+group 'com.github.holovin'
+version '3.0'
 
 sourceCompatibility = 1.8
 
@@ -26,17 +17,9 @@ dependencies {
 }
 
 intellij {
-    version '2018.2.3'
-    pluginName 'TabSwitch2'
+    version '2019.3.2'
+    pluginName 'TabSwitch3'
 }
 patchPluginXml {
     changeNotes """"""
 }
-
-publishPlugin {
-    username intellijPublishUsername
-    password intellijPublishPassword
-}
-
-group 'com.jetbrains'
-version '0.1.2'

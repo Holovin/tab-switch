@@ -1,13 +1,12 @@
-<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
-
-<idea-plugin url="https://github.com/stepan/tab-switch">
-    <name>TabSwitch2</name>
+<idea-plugin url="https://github.com/holovin/tab-switch">
+    <name>TabSwitch3</name>
     <version>0.1.0</version>
-    <idea-version since-build="141.1532"/>
+    <idea-version since-build="182.1532"/>
 
     <description><![CDATA[
 
     <strong>
+        Fork of <a href="https://plugins.jetbrains.com/plugin/11127-tabswitch2">Tabswitch2</a>.
         Fixed issues with the original <a href="https://plugins.jetbrains.com/plugin/179-tabswitch">Tabswitch</a> as it
         was not working correctly with the latest version of Jetbrain editors.
     </strong>
@@ -29,7 +28,7 @@
     0.1.0: Initial Release
   ]]></change-notes>
 
-    <vendor url="https://github.com/stepan" email="stepang+tabswitch2@gmail.com">Stepan Grigoryan</vendor>
+    <vendor url="https://github.com/holovin" email="alex@holov.in">Alex Holovin</vendor>
 
     <project-components>
         <component>
@@ -39,29 +38,9 @@
 
     <actions>
         <action
-                id="tabswitch.action.NextTabAction"
-                class="tabswitch.action.NextTabAction"
-                text="Next tab">
-        </action>
-        <action
-                id="tabswitch.action.PrevTabAction"
-                class="tabswitch.action.PrevTabAction"
-                text="Previous tab">
-        </action>
-        <action
-                id="TabSwitchPlugin.NextVcsChangeAction"
-                class="tabswitch.action.NextVcsChangeAction"
-                text="Next VCS change tab">
-        </action>
-        <action
-                id="TabSwitchPlugin.PrevVcsChangeAction"
-                class="tabswitch.action.PrevVcsChangeAction"
-                text="Previous VCS change tab">
-        </action>
-        <action
-                id="TabSwitchPlugin.SwitchTab"
-                class="tabswitch.action.SwitchTabAction"
-                text="Switch Between Two Tabs (No UI, No Keyboard Modifier Needed)">
+                id="TabSwitchPlugin.ShowWindow"
+                class="tabswitch.action.ShowWindow"
+                text="Show tabs window">
         </action>
     </actions>
 
